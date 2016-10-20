@@ -72,6 +72,7 @@ h1 = plt[:hist](Y_star, 30, normed="True", color="blue") # Histogram
 subplot(122)
 title("distribution of Y")
 h2 = plt[:hist](Y, 30,  normed="True", color = "blue") # Histogram
+savefig(string(path_to_main,"/output/censoring.png"))
 
 #################
 # MCMC parameter:
@@ -87,7 +88,7 @@ sigma = 0.15*eye(number_regressors) #"jump" parameter for the proposal matrix.
 #sigma = 0.001*(transpose(A)*A + eye(number_regressors))
 
 
-N = 1000000 #number of times to iterate the markov chain
+N = 10000000 #number of times to iterate the markov chain
 burnin = Int((1/10)*N)
 ##########################
 # initial draw for MCMC is
@@ -326,7 +327,7 @@ result_beta2 = quantile(squeeze(theta[3, burnin:N],1),[0.10, 0.5, 0.90])
 result_beta3 = quantile(squeeze(theta[4, burnin:N],1),[0.10, 0.5, 0.90])
 
 results = DataFrame(variable = ["P10"; "Median"; "P90"], beta0 = result_beta0, beta1 = result_beta1, beta2 = result_beta2, beta3 = result_beta3)
-writetable(string(path_to_main,"/output/output_table.png"), results)
+writetable(string(path_to_main,"/output/output_table.csv"), results)
 
 
 println("Rejection rate = $(Reject/N)")
