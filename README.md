@@ -1,4 +1,4 @@
-# MCMC_Approach_Classical_Estimation
+# Discussion: An MCMC Approach to Classical Estimation
 This repository illustrates how to use LTEs (Laplace type estimators) to identify the coeffients of a median regression using the LAD estimator (Powell, 1984). LTEs were developped by V. Chernozhukov and H. Hong in "An MCMC approach to classical estimation", Journal of Econometrics, Vol. 115, N°2, pp. 293-346, 2003.
 
 This code is still in its preliminary stage. One main problem is that the rejection rate is too high. A multivariate transition kernel is used, and the selection of the "jumping" factor is done manually so far. An adaptive MCMC scheme will be implemented in the future.
