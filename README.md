@@ -1,7 +1,7 @@
 # An MCMC Approach to Classical Estimation
 
 This repository illustrates how to use **Laplace type estimators** (LTEs) in the
-context of a **median regression**. See the [slides.](https://github.com/JulienPascal/MCMC_Approach_Classical_Estimation/blob/julia.1.6/main.pdf) for more details.
+context of a **median regression**. See the [slides](https://github.com/JulienPascal/MCMC_Approach_Classical_Estimation/blob/julia.1.6/main.pdf) for more details.
 
 ---
 
